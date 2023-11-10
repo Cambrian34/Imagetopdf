@@ -1,0 +1,27 @@
+
+<!-- 
+    This HTML file contains a form that allows users to select multiple image files and convert them into a single PDF file.
+    The converted PDF file can then be downloaded or previewed.
+    The file includes two JavaScript files: jspdf.umd.js and scripts.js.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PDF</title>
+
+    <script src="scripts/jspdf.umd.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <input type="file" id="imageInput" accept=".png, .bmp, .jpg, .jpeg" multiple="multiple" title="add">
+    <button  onclick="convertAndDownload()">Convert and Download PDF</button>
+    <button onclick="previewPDF()">Preview PDF</button>
+    <div id="loadingIndicator" style="display: none;">Loading...</div>
+
+   
+</body>
+</html>
